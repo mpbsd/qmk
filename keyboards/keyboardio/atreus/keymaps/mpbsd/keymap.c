@@ -1,11 +1,22 @@
 #include QMK_KEYBOARD_H
 
+/* HOME ROW MODS: L HAND */
+#define LHRM_1 MT(MOD_LCTL,KC_A)
+#define LHRM_2 MT(MOD_LGUI,KC_S)
+#define LHRM_3 MT(MOD_LALT,KC_D)
+#define LHRM_4 MT(MOD_LSFT,KC_F)
+/* HOME ROW MODS: R HAND */
+#define RHRM_1 MT(MOD_RSFT,KC_J)
+#define RHRM_2 MT(MOD_RALT,KC_K)
+#define RHRM_3 MT(MOD_RGUI,KC_L)
+#define RHRM_4 MT(MOD_RCTL,KC_SCLN)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
-             LT(4,KC_Q),       LT(3,KC_W),       LT(2,KC_E),       LT(1,KC_R), KC_T,                                KC_Y,        LT(1,KC_U),       LT(2,KC_I),       LT(3,KC_O),          LT(4,KC_P),
-      MT(MOD_LCTL,KC_A),MT(MOD_LGUI,KC_S),MT(MOD_LALT,KC_D),MT(MOD_LSFT,KC_F), KC_G,                                KC_H, MT(MOD_RSFT,KC_J),MT(MOD_RALT,KC_K),MT(MOD_RGUI,KC_L),MT(MOD_RCTL,KC_SCLN),
-                   KC_Z,             KC_X,             KC_C,             KC_V, KC_B, XXXXXXX,      XXXXXXX,         KC_N,              KC_M,          KC_COMM,           KC_DOT,             KC_SLSH,
-                XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX, LT(2,KC_BSPC), LT(1,KC_ESC), LT(1,KC_ENT),      LT(2,KC_SPC),          XXXXXXX,          XXXXXXX,    XXXXXXX, XXXXXXX
+      LT(4,KC_Q), LT(3,KC_W), LT(2,KC_E), LT(1,KC_R),          KC_T,                                     KC_Y, LT(1,KC_U), LT(2,KC_I), LT(3,KC_O), LT(4,KC_P),
+          LHRM_1,     LHRM_2,     LHRM_3,     LHRM_4,          KC_G,                                     KC_H,     RHRM_1,     RHRM_2,     RHRM_3,     RHRM_4,
+            KC_Z,       KC_X,       KC_C,       KC_V,          KC_B,      XXXXXXX,      XXXXXXX,         KC_N,       KC_M,    KC_COMM,     KC_DOT,    KC_SLSH,
+         XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX, LT(2,KC_BSPC), LT(1,KC_ESC), LT(1,KC_ENT), LT(2,KC_SPC),    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
     ),
   [1] = LAYOUT(
          KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     KC_6, KC_7,    KC_8,    KC_9,    KC_0,
