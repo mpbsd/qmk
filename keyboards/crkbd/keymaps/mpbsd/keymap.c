@@ -5,16 +5,16 @@
 #define LLT2 LT(3,KC_W)
 #define LLT3 LT(2,KC_E)
 #define LLT4 LT(1,KC_R)
-#define LLT5 LT(1,KC_BSPC)
-#define LLT6 LT(1,KC_ESC)
+#define LLT5 LT(1,KC_ESC)
+#define LLT6 LT(1,KC_BSPC)
 
 /* LAYER TO: RHAND */
 #define RLT1 LT(1,KC_U)
 #define RLT2 LT(2,KC_I)
 #define RLT3 LT(3,KC_O)
 #define RLT4 LT(4,KC_P)
-#define RLT5 LT(4,KC_SPC)
-#define RLT6 LT(4,KC_ENT)
+#define RLT5 LT(4,KC_ENT)
+#define RLT6 LT(4,KC_SPC)
 
 /* HOME ROW MODS: LHAND */
 #define LHRM1 MT(MOD_LCTL,KC_A)
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX,  LLT4,  LLT3,  LLT2,    LLT1, KC_T,             KC_Y,    RLT1,    RLT2,   RLT3,    RLT4, XXXXXXX,
       XXXXXXX, LHRM1, LHRM2, LHRM3,   LHRM4, KC_G,             KC_H,   RHRM1,   RHRM2,  RHRM3,   RHRM4, XXXXXXX,
       XXXXXXX,  KC_Z,  KC_X,  KC_C,    KC_V, KC_B,             KC_N,    KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
-                                    XXXXXXX, LLT5, LLT6, RLT6, RLT5, XXXXXXX
+                                    XXXXXXX, LLT6, LLT5, RLT5, RLT6, XXXXXXX
     ),
 
     [1] = LAYOUT_split_3x6_3(

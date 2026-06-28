@@ -1,10 +1,27 @@
 #include QMK_KEYBOARD_H
 
+/* LAYER TO: LHAND */
+#define LLT1 LT(4,KC_Q)
+#define LLT2 LT(3,KC_W)
+#define LLT3 LT(2,KC_E)
+#define LLT4 LT(1,KC_R)
+#define LLT5 LT(1,KC_ESC)
+#define LLT6 LT(2,KC_BSPC)
+
+/* LAYER TO: LHAND */
+#define RLT1 LT(1,KC_U)
+#define RLT2 LT(2,KC_I)
+#define RLT3 LT(3,KC_O)
+#define RLT4 LT(4,KC_P)
+#define RLT5 LT(1,KC_ENT)
+#define RLT6 LT(2,KC_SPC)
+
 /* HOME ROW MODS: LHAND */
 #define LHRM1 MT(MOD_LCTL,KC_A)
 #define LHRM2 MT(MOD_LGUI,KC_S)
 #define LHRM3 MT(MOD_LALT,KC_D)
 #define LHRM4 MT(MOD_LSFT,KC_F)
+
 /* HOME ROW MODS: RHAND */
 #define RHRM1 MT(MOD_RSFT,KC_J)
 #define RHRM2 MT(MOD_RALT,KC_K)
@@ -13,16 +30,16 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
-      LT(4,KC_Q), LT(3,KC_W), LT(2,KC_E), LT(1,KC_R),          KC_T,                                     KC_Y, LT(1,KC_U), LT(2,KC_I), LT(3,KC_O), LT(4,KC_P),
-           LHRM1,      LHRM2,      LHRM3,      LHRM4,          KC_G,                                     KC_H,      RHRM1,      RHRM2,      RHRM3,      RHRM4,
-            KC_Z,       KC_X,       KC_C,       KC_V,          KC_B,      XXXXXXX,      XXXXXXX,         KC_N,       KC_M,    KC_COMM,     KC_DOT,    KC_SLSH,
-         XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX, LT(2,KC_BSPC), LT(1,KC_ESC), LT(1,KC_ENT), LT(2,KC_SPC),    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX
+         LLT4,    LLT3,    LLT2,    LLT1, KC_T,                   KC_Y,    RLT1,    RLT2,    RLT3,    RLT4,
+        LHRM1,   LHRM2,   LHRM3,   LHRM4, KC_G,                   KC_H,   RHRM1,   RHRM2,   RHRM3,   RHRM4,
+         KC_Z,    KC_X,    KC_C,    KC_V, KC_B, XXXXXXX, XXXXXXX, KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LLT6,    LLT5,    RLT5, RLT6, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [1] = LAYOUT(
          KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     KC_6, KC_7,    KC_8,    KC_9,    KC_0,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_PPLS, KC_4,    KC_5,    KC_6, KC_PMNS,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,KC_PAST, KC_1,    KC_2,    KC_3, KC_PSLS,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, KC_0, XXXXXXX, XXXXXXX, XXXXXXX
+       KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_PPLS, KC_4,    KC_5,    KC_6, KC_PMNS,
+      KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,KC_PAST, KC_1,    KC_2,    KC_3, KC_PSLS,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_DEL,  KC_INS, XXXXXXX,XXXXXXX, KC_0, XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [2] = LAYOUT(
       KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
@@ -40,6 +57,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, KC_F10,  KC_F11,  KC_F12,  XXXXXXX,                   XXXXXXX, KC_PSCR, KC_SCRL, KC_PAUS, XXXXXXX,
       XXXXXXX,  KC_F7,   KC_F8,   KC_F9,  XXXXXXX,                   KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX,
       XXXXXXX,  KC_F4,   KC_F5,   KC_F6,  XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX,  KC_F1,   KC_F2,   KC_F3,   KC_DEL,  KC_INS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+      XXXXXXX,  KC_F1,   KC_F2,   KC_F3,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
